@@ -5,7 +5,7 @@ Evidence mode: deterministic synthetic local fixture
 Live Microsoft service evidence: not collected
 Scenario: Autonomous Airline OCC Copilot Cowork & Multi-IQ Grounding
 Decision owner: Chief Duty Pilot
-Input: `.local/ideas/002-autonomous-airline-occ-cowork-iq/repo-assets/sample-data/aviation-disruption-cases.json`
+Input: `sample-data/aviation-disruption-cases.json`
 Case boundary: expected 16; observed 16
 Negative cases: 10
 Observed mismatches: 0

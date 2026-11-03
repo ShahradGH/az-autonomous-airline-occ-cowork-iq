@@ -2,7 +2,7 @@
 
 > Grounding Microsoft Teams Copilot Cowork across the 4-Pillar Microsoft IQ Stack (Work, Web, Foundry, and Fabric) with deterministic Pester test verification and pure Microsoft Graph v2.x Workload Identities.
 
-[![Architecture: Microsoft Frontier Tour](https://img.shields.io/badge/Architecture-Microsoft_Frontier_Tour_2026-0078D4?logo=microsoftazure)](https://alerasoul.net/002-autonomous-airline-occ-cowork-iq/)
+[![Architecture: Microsoft Frontier Tour](https://img.shields.io/badge/Architecture-Microsoft_Frontier_Tour_2026-0078D4?logo=microsoftazure)](https://alerasoul.net/autonomous-airline-occ-cowork-iq/)
 [![Verification: 16-Test Pester Matrix](https://img.shields.io/badge/Pester_Tests-16_Passed-success)](tests/AviationOCCMatrix.Tests.ps1)
 [![Identity: Microsoft Graph v2.x](https://img.shields.io/badge/Identity-Graph_v2.x_Workload_Identity-008272)](identity/Deploy-AviationIdentityMesh.ps1)
 [![Telemetry: KQL Diagnostics](https://img.shields.io/badge/Telemetry-Application_Insights_KQL-5C2D91)](diagnostics/AviationDiagnostics.kql)
@@ -20,7 +20,7 @@ Nowhere is the failure of the "blank prompt box" more glaring than in an interna
 This repository hosts the production runbooks, Microsoft Graph v2.x workload identity provisioning, 16-test deterministic Pester verification matrix, and Azure Monitor KQL telemetry pack for the **Autonomous Airline OCC Co-Worker**.
 
 📖 **Read the full architectural deep dive on the blog**:  
-👉 **[Beyond the Chatbot: Autonomous Airline OCC Grounded across 4 Microsoft IQs](https://alerasoul.net/002-autonomous-airline-occ-cowork-iq/)**
+👉 **[Beyond the Chatbot: Autonomous Airline OCC Grounded across 4 Microsoft IQs](https://alerasoul.net/autonomous-airline-occ-cowork-iq/)**
 
 ---
 
