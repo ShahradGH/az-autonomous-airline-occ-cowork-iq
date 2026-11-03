@@ -1,0 +1,46 @@
+// Aviation OCC Multi-IQ Distributed Tracing & Circuit Breaker KQL Pack
+// Target: Azure Log Analytics / Azure Monitor Application Insights
+// Author: Shahrad Alerasoul | Technical Authority Reference
+
+// 1. End-to-End Multi-IQ Ingress & Context Resolution Latency
+AppDependencies
+| where AppRoleName in ("App-Agent-AviationOCC", "Fabric-DirectLake-Engine", "AI-Search-FTL", "Eurocontrol-NMOC-Bridge")
+| project 
+    Timestamp = TimeGenerated,
+    OperationId,
+    AgentComponent = AppRoleName,
+    TargetResource = Target,
+    DurationMs,
+    ResultCode,
+    Success
+| order by Timestamp asc
+
+// 2. 8-Turn Negotiation Circuit Breaker Monitor
+AppEvents
+| where Name == "AutonomousNegotiationTurn"
+| extend TurnCount = toint(customDimensions.TurnIndex)
+| summarize MaxTurns = max(TurnCount) by OperationId, bin(TimeGenerated, 5m)
+| where MaxTurns >= 8
+| extend Severity = "CRITICAL_CIRCUIT_BREAKER_TRIPPED"
+| project TimeGenerated, OperationId, MaxTurns, Severity
+
+// 3. EU261 Compensation Liability Exposure Metric
+AppMetrics
+| where Name in ("PassengerDelayLiabilityPounds", "FlightTurnaroundAvoidedCost")
+| summarize 
+    TotalLiabilityAverted = sumif(Sum, Name == "FlightTurnaroundAvoidedCost"),
+    TotalResidualRisk = sumif(Sum, Name == "PassengerDelayLiabilityPounds")
+    by bin(TimeGenerated, 1h)
+| render timechart
+
+// 4. Chief Duty Pilot Decision Gate Sign-Off Audit Trail
+AppEvents
+| where Name in ("PendingDutyPilotSignOff", "DutyPilotApproved", "DutyPilotRejected")
+| project 
+    Timestamp = TimeGenerated,
+    FlightNumber = tostring(customDimensions.FlightNumber),
+    TailProposed = tostring(customDimensions.ProposedTail),
+    PilotUpn = tostring(customDimensions.SignOffPilotUpn),
+    EventName = Name,
+    ActionTimeSeconds = toreal(customDimensions.ElapsedApprovalSeconds)
+| order by Timestamp desc
