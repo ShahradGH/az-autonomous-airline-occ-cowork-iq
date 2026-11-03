@@ -78,3 +78,4 @@ if ($role) {
 }
 
 Write-Host "==> [Identity Mesh] Identity provisioning verified for $AppName." -ForegroundColor Green
+

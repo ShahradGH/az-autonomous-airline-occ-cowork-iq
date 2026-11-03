@@ -167,3 +167,4 @@ Execute the queries in `diagnostics/AviationDiagnostics.kql` against your Azure 
 *Principal Azure Infrastructure & Platform Architect | Enterprise AI Strategic Advisor*  
 * Website: [alerasoul.net](https://alerasoul.net)  
 * GitHub: [@ShahradGH](https://github.com/ShahradGH)  
+

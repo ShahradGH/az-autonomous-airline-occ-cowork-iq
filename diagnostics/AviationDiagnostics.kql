@@ -44,3 +44,4 @@ AppEvents
     EventName = Name,
     ActionTimeSeconds = toreal(customDimensions.ElapsedApprovalSeconds)
 | order by Timestamp desc
+

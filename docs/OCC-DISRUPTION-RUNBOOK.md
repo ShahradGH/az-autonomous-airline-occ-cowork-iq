@@ -63,3 +63,4 @@ Under airline safety compliance, autonomous agents are strictly forbidden from w
 2. **Action Trigger**: The Chief Duty Pilot inspects the pre-calculated FTL safety figures and passenger connection breakdown on Teams.
 3. **MFA Verification**: Approving the adaptive card submits an Entra ID authenticated action.
 4. **Execution Dispatch**: Only after pilot sign-off does the ground crew push tail `G-NEOU` to flight BA-942.
+

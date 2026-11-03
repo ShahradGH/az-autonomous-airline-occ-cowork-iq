@@ -33,3 +33,4 @@ Write-Host "Disabling Service Principal $($sp.Id)..." -ForegroundColor Red
 Update-MgServicePrincipal -ServicePrincipalId $sp.Id -AccountEnabled:$false
 
 Write-Host "==> [Kill-Switch] Workload identity deactivated and permissions severed." -ForegroundColor Green
+
