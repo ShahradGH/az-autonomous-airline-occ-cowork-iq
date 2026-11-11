@@ -15,7 +15,7 @@
 At the **Microsoft Frontier Tour at ExCeL London**, Satya Nadella framed the 2026–2027 enterprise AI paradigm:
 > *"The future of knowledge work is not typing prompts into empty chat sidebars. It is autonomous agents operating directly in the flow of work—sensing, reasoning, and collaborating in real-time."*
 
-Nowhere is the failure of the "blank prompt box" more glaring than in an international airline **Operations Control Centre (OCC)**. When an aircraft develops a mechanical fault at the gate, dispatchers have minutes to avert statutory passenger compensation, slot loss, and crew duty violations.
+The "blank prompt box" collapses under operational stress inside an international airline **Operations Control Centre (OCC)**. When an aircraft develops a mechanical fault at the gate, dispatchers have minutes to avert statutory passenger compensation, slot loss, and crew duty violations.
 
 This repository hosts the production runbooks, Microsoft Graph v2.x workload identity provisioning, 16-test deterministic Pester verification matrix, and Azure Monitor KQL telemetry pack for the **Autonomous Airline OCC Co-Worker**.
 
